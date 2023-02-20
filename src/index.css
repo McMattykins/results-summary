@@ -1,13 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0 auto;
+  font-family: 'Hanken Grotesk', sans-serif;
+  max-width: 1440px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  box-sizing: content-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+h2 {
+  text-align: left;
+  font-size: 1.25rem;
+}
+
+.app {
+  min-width: 375px; 
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: hsl(241, 100%, 89%);
+  padding: 1em 2em;
+  border-radius: 0 0 2em 2em;
+}
+
+.result-circle {
+  padding: 1em 2em;
+  background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+  border-radius: 50%;
+}
+
+.result-score {
+  font-size: 3.75rem;
+  font-weight: 700;
+  color: hsl(221, 100%, 96%);
+}
+
+.result-subtitle {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: hsl(221, 100%, 96%);
+  margin-bottom: .5em;
+}
+
+.summary {
+  margin: 1em;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  padding: 1em;
+  border-radius: .5em;
+  margin: 1em 0;
+}
+
+.icon {
+  transform: translateY(15%);
+  padding-right: 1em;
+}
+
+.score {
+  color: black;
+}
+
+.total {
+  color: gray;
+}
+
+#reaction {
+  background-color: hsla(0, 100%, 67%, 25%);
+  color: hsl(0, 100%, 67%)
+}
+
+#memory {
+  background-color: hsla(39, 100%, 56%, 25%);
+  color: hsl(39, 100%, 56%);
+}
+
+#verbal {
+  background-color: hsla(166, 100%, 37%, 25%);
+  color: hsl(166, 100%, 37%);
+}
+
+#visual {
+  background-color: hsla(234, 85%, 45%, 25%);
+  color: hsl(234, 85%, 45%);
+}
+
+button {
+  font-size: inherit;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(224, 30%, 27%);
+  border: none;
+  width: 100%;
+  border-radius: 2em;
+  padding: 1em;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+button:active {
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));;
+}
+
+@media (min-width: 376px) {
+  body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+  }
+
+  .app {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: .5em;
+    margin: 0 auto;
+    max-width: 780px;
+  }
+  
+  .result,
+  .summary {
+    border-radius: 2em;
+    width: 50%;
+  }
+
+  .result {
+    padding: 2em;
+  }
+
+  .result-details {
+    padding: 0 2em;
+  }
+
+  .result-circle {
+    padding: 2em 3em;
+  }
+  
+  .result-subtitle {
+    font-size: 2em;
+  }
+  
+  .summary {
+    margin-left: 2em;
+    margin-right: 0;
+  }
+  
+  button {
+    margin-bottom: 1em;
+    border: none;
+  }
 }
